@@ -15,10 +15,10 @@ echo '<!doctype html>
 <html>
  <head>
 <meta charset="UTF-8">
-<link type="text/css" rel="stylesheet" href="reset" media="all" />
-<link type="text/css" rel="stylesheet" href="style" media="all" />
-<script type="text/javascript" src="jquery/jquery.min.js"></script>
-<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/reset.css" media="all" />
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script>
     $(function(){
       $( document ).tooltip({
