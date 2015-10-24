@@ -1,0 +1,85 @@
+body{
+ font-family:Helvetica, Arial, sans-serif; 
+}
+div.channel{
+ width:80px;
+ border-left:solid 1px black;
+}
+div.channel.empty{
+ background-color:#333;
+}
+div.channel.empty.right{
+ text-align:right;
+}
+div.row{
+ height:46px;
+ width:1082px;
+ margin:auto;
+}
+div.row>div{
+ display:inline-block;
+ height:45px;
+ overflow:hidden;
+ border-left:solid 1px black;
+ border-bottom:solid 1px black;
+}
+div.row:first-child>div{
+ height:46px;
+ border-top:solid 1px black;
+ border-bottom:solid 1px black;
+}
+div.row>div:last-child{
+ border-right:solid 1px black;
+}
+div.programme{
+ background-color:#ccc;
+ color:#000;
+}
+div.row:nth-child(even)>div.programme{
+ background-color:#eee;
+}
+div.programme.Film, div.programme.Movie{
+ background-color:#ccf !important;
+}
+div.programme.Sport{
+ background-color:#cfc !important;
+}
+div.programme.Music{
+ background-color:#fcc !important;
+}
+div.header{
+ background-color:#333;
+ color:white;
+}
+.ui-helper-hidden-accessible{
+ display:none;
+}
+.ui-tooltip {
+ padding: 8px;
+ position: absolute;
+ z-index: 9999;
+ max-width: 300px;
+ -webkit-box-shadow: 0 0 5px #aaa;
+ box-shadow: 0 0 5px #aaa;
+ border-width: 2px;
+ background-color:white;
+}
+.ui-tooltip p.time,.ui-tooltip p.rating{
+ font-size:60%;
+ color:#999;
+}
+.ui-tooltip p.description{
+ font-size:80%;
+}
+p{
+ font-size:80%;
+ padding:5px;
+}
+h2{
+ padding:10px 5px 0 5px;
+ font-size:120%;
+}
+h2 a{
+ text-decoration:none;
+ color:white;
+}

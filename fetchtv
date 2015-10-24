@@ -1,0 +1,12 @@
+#!/bin/bash
+FOLDER="`dirname \"$0\"`"
+FOLDER="`( cd \"$MY_PATH\" && pwd )`"
+if [ -z "$FOLDER" ] ; then exit 1; fi
+cd $FOLDER
+tv_grab_uk_atlas --offset -1 --days 10 > .tv.xml
+tv_remove_some_overlapping .tv.xml > .tv2.xml
+tv_sort --by-channel              > .tv.xml < .tv2.xml
+tv_imdb --imdbdir imdb --with-keywords --with-plot --stats .tv.xml > .tv2.xml
+iconv -f UTF-8//IGNORE -t UTF-8//IGNORE .tv2.xml > tv.xml
+rm .tv.xml .tv2.xml
+php index.php
