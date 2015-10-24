@@ -16,16 +16,16 @@ $xpath = new DOMXpath($doc);
 // Load channels
 foreach($xpath->query('/tv/channel') as $element){
   $id = $element->getAttribute('id');
-	foreach($element->getElementsByTagName('icon') as $icon){
+  foreach($element->getElementsByTagName('icon') as $icon){
     $url = $icon->getAttribute('src');
   }
   foreach($element->getElementsByTagName('display-name') as $displayname){
     $displayname = $displayname->nodeValue;
   }
-	// Get the filename (could use a proper URL function here).
-	$filename = explode('/', $url);
-	$filename = array_pop($filename);
-	// Check if the image exists, else we try to download it
+  // Get the filename (could use a proper URL function here).
+  $filename = explode('/', $url);
+  $filename = array_pop($filename);
+  // Check if the image exists, else we try to download it
   if(!file_exists("images/$filename")){
     file_put_contents("images/$filename", file_get_contents($url));
   }
