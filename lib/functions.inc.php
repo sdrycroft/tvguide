@@ -1,7 +1,7 @@
 <?php
 // Title text
 function get_title_text($row){
-  return ( $row->url ? '<a href=\''.$row->url.'\'>' : '' ).htmlspecialchars($row->title). ( $row->url ? '</a>' : '');
+  return ( $row->url ? '<a href=\''.$row->url.'\' target=\'_blank\'>' : '' ).htmlspecialchars($row->title). ( $row->url ? '</a>' : '');
 }
 // Title stuff
 function get_tooltip_text($row){
