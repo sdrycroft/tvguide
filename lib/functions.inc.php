@@ -18,7 +18,7 @@ function get_tooltip_text($row){
     '"';
 }
 // Width calculate function
-function calculate_width($start, $stop, $min, $max, $screen_width = 980, $width = 240){
+function calculate_width($start, $stop, $min, $max, $screen_width, $width = 240){
   $start = time2timestamp($start);
   $stop = time2timestamp($stop);
   $min = time2timestamp($min);
