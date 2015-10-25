@@ -3,3 +3,6 @@ images/*jpg
 tv.xml
 imdb
 config.inc.php
+
+#OSX
+.AppleDouble
