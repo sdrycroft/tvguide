@@ -34,6 +34,8 @@ div.row>div:last-child{
 div.programme{
  background-color:#ccc;
  color:#000;
+ background-position:100% 100%;
+ background-repeat:no-repeat;
 }
 div.row:nth-child(even)>div.programme{
  background-color:#eee;
@@ -41,11 +43,23 @@ div.row:nth-child(even)>div.programme{
 div.programme.Film, div.programme.Movie{
  background-color:#ccf !important;
 }
-div.programme.Sport{
+div.programme.Sport, div.programme.Sports, div.programme.Rugby, div.programme.Horse.Racing{
  background-color:#cfc !important;
 }
 div.programme.Music{
  background-color:#fcc !important;
+}
+div.programme.Football{
+ background-image:url('football.png');
+}
+div.programme.Film{
+ background-image:url('film.png');
+}
+div.programme.Music{
+ background-image:url('music.png');
+}
+div.programme.Cooking{
+ background-image:url('cooking.png');
 }
 div.header{
  background-color:#333;
