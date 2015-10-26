@@ -29,6 +29,9 @@ echo '<!doctype html>
           return $(this).prop(\'title\');
         }
       });
+      $(".programme").on("click hover", function(){
+        $(this).tooltip("open");
+      });
     });
   </script>
   <title>TV</title>
