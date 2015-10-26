@@ -24,13 +24,15 @@ echo '<!doctype html>
   <script>
     Cookies.set(\'tvwidth\', window.screen.availWidth);
     $(function(){
-      $( document ).tooltip({
+      $(document).tooltip({
         content: function () {
           return $(this).prop(\'title\');
         }
       });
-      $(".programme").on("click hover", function(){
-        $(this).tooltip("open");
+      $(".programme").on("click", function(){
+        if(typeof $(this).tooltip("instance") != "undefined"){
+          $(this).tooltip("open");
+        }
       });
     });
   </script>
