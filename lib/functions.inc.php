@@ -14,8 +14,7 @@ function get_tooltip_text($row){
     date('H:i', time2timestamp($row->stop)).
     '</p>'.
     ($row->description?'<p class=\'description\'>'.htmlspecialchars($row->description).'</p>':'').
-    ($row->rating?'<p class=\'rating\'>'.htmlspecialchars($row->rating).'</p>':'').
-    '"';
+    ($row->rating?'<p class=\'rating\'>'.htmlspecialchars($row->rating).'</p>':'');
 }
 // Width calculate function
 function calculate_width($start, $stop, $min, $max, $screen_width, $width = 240){
