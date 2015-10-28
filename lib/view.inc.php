@@ -10,7 +10,7 @@ if(isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] < 42 && $_
 $now = date('YmdH0000', $start_timestamp);
 $now1 = date('YmdH0000', $start_timestamp + 3600);
 $now4 = date('YmdH0000', $start_timestamp + 14400);
-$width = !empty($_COOKIE['tvwidth']) && $_COOKIE['tvwidth'] > 600 ? ($_COOKIE['tvwidth'] - 100) : 980;
+$width = !empty($_COOKIE['tvwidth']) && $_COOKIE['tvwidth'] > 600 ? ($_COOKIE['tvwidth'] - 101) : 980;
 $hour_width = calculate_width($now, $now1, $now, $now4, $width);
 echo '<!doctype html>
 <html>
@@ -22,7 +22,7 @@ echo '<!doctype html>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/js.cookie.js"></script>
   <script>
-    Cookies.set(\'tvwidth\', window.screen.availWidth);
+    Cookies.set(\'tvwidth\', window.innerWidth);
     $(function(){
       $(document).tooltip({
         content: function () {
