@@ -1,6 +1,6 @@
 #!/bin/bash
 FOLDER="`dirname \"$0\"`"
-FOLDER="`( cd \"$MY_PATH\" && pwd )`"
+FOLDER="`( cd \"$FOLDER\" && pwd )`"
 if [ -z "$FOLDER" ] ; then exit 1; fi
 cd $FOLDER
 tv_grab_uk_atlas --offset -1 --days 10 > .tv.xml
